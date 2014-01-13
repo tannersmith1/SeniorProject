@@ -21,6 +21,10 @@
 		518C5BCF188368C100D8FF8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518C5BB1188368C100D8FF8F /* UIKit.framework */; };
 		518C5BD7188368C100D8FF8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 518C5BD5188368C100D8FF8F /* InfoPlist.strings */; };
 		518C5BD9188368C200D8FF8F /* SeniorProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BD8188368C100D8FF8F /* SeniorProjectTests.m */; };
+		518C5BEA188371FA00D8FF8F /* TeamCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BE9188371FA00D8FF8F /* TeamCreationViewController.m */; };
+		518C5BED188380C200D8FF8F /* cParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BEC188380C200D8FF8F /* cParty.m */; };
+		518C5BF0188382CE00D8FF8F /* cUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BEF188382CE00D8FF8F /* cUser.m */; };
+		518C5BF3188382F600D8FF8F /* cPartyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BF2188382F600D8FF8F /* cPartyManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		518C5BD4188368C100D8FF8F /* SeniorProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SeniorProjectTests-Info.plist"; sourceTree = "<group>"; };
 		518C5BD6188368C100D8FF8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		518C5BD8188368C100D8FF8F /* SeniorProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeniorProjectTests.m; sourceTree = "<group>"; };
+		518C5BE8188371FA00D8FF8F /* TeamCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamCreationViewController.h; sourceTree = "<group>"; };
+		518C5BE9188371FA00D8FF8F /* TeamCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamCreationViewController.m; sourceTree = "<group>"; };
+		518C5BEB188380C200D8FF8F /* cParty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cParty.h; sourceTree = "<group>"; };
+		518C5BEC188380C200D8FF8F /* cParty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cParty.m; sourceTree = "<group>"; };
+		518C5BEE188382CE00D8FF8F /* cUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cUser.h; sourceTree = "<group>"; };
+		518C5BEF188382CE00D8FF8F /* cUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cUser.m; sourceTree = "<group>"; };
+		518C5BF1188382F600D8FF8F /* cPartyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cPartyManager.h; sourceTree = "<group>"; };
+		518C5BF2188382F600D8FF8F /* cPartyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cPartyManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +124,11 @@
 		518C5BB3188368C100D8FF8F /* SeniorProject */ = {
 			isa = PBXGroup;
 			children = (
+				518C5BE718836F4800D8FF8F /* BOL */,
+				518C5BE618836F2600D8FF8F /* BO */,
+				518C5BE518836F2000D8FF8F /* UI */,
 				518C5BBC188368C100D8FF8F /* AppDelegate.h */,
 				518C5BBD188368C100D8FF8F /* AppDelegate.m */,
-				518C5BBF188368C100D8FF8F /* Main.storyboard */,
-				518C5BC2188368C100D8FF8F /* ViewController.h */,
-				518C5BC3188368C100D8FF8F /* ViewController.m */,
 				518C5BC5188368C100D8FF8F /* Images.xcassets */,
 				518C5BB4188368C100D8FF8F /* Supporting Files */,
 			);
@@ -150,6 +162,38 @@
 				518C5BD5188368C100D8FF8F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		518C5BE518836F2000D8FF8F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				518C5BBF188368C100D8FF8F /* Main.storyboard */,
+				518C5BC2188368C100D8FF8F /* ViewController.h */,
+				518C5BC3188368C100D8FF8F /* ViewController.m */,
+				518C5BE8188371FA00D8FF8F /* TeamCreationViewController.h */,
+				518C5BE9188371FA00D8FF8F /* TeamCreationViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		518C5BE618836F2600D8FF8F /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				518C5BEB188380C200D8FF8F /* cParty.h */,
+				518C5BEC188380C200D8FF8F /* cParty.m */,
+				518C5BEE188382CE00D8FF8F /* cUser.h */,
+				518C5BEF188382CE00D8FF8F /* cUser.m */,
+			);
+			name = BO;
+			sourceTree = "<group>";
+		};
+		518C5BE718836F4800D8FF8F /* BOL */ = {
+			isa = PBXGroup;
+			children = (
+				518C5BF1188382F600D8FF8F /* cPartyManager.h */,
+				518C5BF2188382F600D8FF8F /* cPartyManager.m */,
+			);
+			name = BOL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518C5BF0188382CE00D8FF8F /* cUser.m in Sources */,
+				518C5BF3188382F600D8FF8F /* cPartyManager.m in Sources */,
 				518C5BC4188368C100D8FF8F /* ViewController.m in Sources */,
 				518C5BBE188368C100D8FF8F /* AppDelegate.m in Sources */,
+				518C5BEA188371FA00D8FF8F /* TeamCreationViewController.m in Sources */,
 				518C5BBA188368C100D8FF8F /* main.m in Sources */,
+				518C5BED188380C200D8FF8F /* cParty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
