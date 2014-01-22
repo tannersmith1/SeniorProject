@@ -28,7 +28,15 @@
                              @"password": [self.passwordField text]};
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSString *text = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        self.resultsTextView.text = text;
+        
+        //MANUAL SEGUE HERE
+        if ([text isEqualToString:@"TRUE"]) {
+            [self performSegueWithIdentifier:@"loginSegue" sender:self];
+        }
+        else
+        {
+            self.resultsTextView.text = text;
+        }
         
 
     }
