@@ -11,7 +11,6 @@
 
 
 @interface TeamCreationViewController : UIViewController {
-    
     cPartyManager *_partyMGR;
 }
 

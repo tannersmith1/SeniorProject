@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface cUser : NSObject {
+@interface cUserSingleton : NSObject {
     
-    NSString *_username;
+    NSString *username;
+    NSMutableArray *parties;
 }
+
++ (cUserSingleton *)getInstance;
+@property (nonatomic, strong)NSMutableArray *parties;
 
 @end

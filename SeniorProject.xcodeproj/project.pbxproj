@@ -37,8 +37,10 @@
 		518C5BD9188368C200D8FF8F /* SeniorProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BD8188368C100D8FF8F /* SeniorProjectTests.m */; };
 		518C5BEA188371FA00D8FF8F /* TeamCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BE9188371FA00D8FF8F /* TeamCreationViewController.m */; };
 		518C5BED188380C200D8FF8F /* cParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BEC188380C200D8FF8F /* cParty.m */; };
-		518C5BF0188382CE00D8FF8F /* cUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BEF188382CE00D8FF8F /* cUser.m */; };
+		518C5BF0188382CE00D8FF8F /* cUserSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BEF188382CE00D8FF8F /* cUserSingleton.m */; };
 		518C5BF3188382F600D8FF8F /* cPartyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BF2188382F600D8FF8F /* cPartyManager.m */; };
+		519E3C001891F329005375DA /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519E3BFF1891F328005375DA /* TeamViewController.m */; };
+		519E3C031891FD43005375DA /* cPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 519E3C021891FD43005375DA /* cPlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,10 +103,14 @@
 		518C5BE9188371FA00D8FF8F /* TeamCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamCreationViewController.m; sourceTree = "<group>"; };
 		518C5BEB188380C200D8FF8F /* cParty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cParty.h; sourceTree = "<group>"; };
 		518C5BEC188380C200D8FF8F /* cParty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cParty.m; sourceTree = "<group>"; };
-		518C5BEE188382CE00D8FF8F /* cUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cUser.h; sourceTree = "<group>"; };
-		518C5BEF188382CE00D8FF8F /* cUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cUser.m; sourceTree = "<group>"; };
+		518C5BEE188382CE00D8FF8F /* cUserSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cUserSingleton.h; sourceTree = "<group>"; };
+		518C5BEF188382CE00D8FF8F /* cUserSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cUserSingleton.m; sourceTree = "<group>"; };
 		518C5BF1188382F600D8FF8F /* cPartyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cPartyManager.h; sourceTree = "<group>"; };
 		518C5BF2188382F600D8FF8F /* cPartyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cPartyManager.m; sourceTree = "<group>"; };
+		519E3BFE1891F328005375DA /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
+		519E3BFF1891F328005375DA /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		519E3C011891FD43005375DA /* cPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cPlayerManager.h; sourceTree = "<group>"; };
+		519E3C021891FD43005375DA /* cPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cPlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +260,8 @@
 				513F87A81886441A00374B02 /* LoginViewController.m */,
 				513F87AA1886443000374B02 /* RegisterViewController.h */,
 				513F87AB1886443000374B02 /* RegisterViewController.m */,
+				519E3BFE1891F328005375DA /* TeamViewController.h */,
+				519E3BFF1891F328005375DA /* TeamViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -263,8 +271,8 @@
 			children = (
 				518C5BEB188380C200D8FF8F /* cParty.h */,
 				518C5BEC188380C200D8FF8F /* cParty.m */,
-				518C5BEE188382CE00D8FF8F /* cUser.h */,
-				518C5BEF188382CE00D8FF8F /* cUser.m */,
+				518C5BEE188382CE00D8FF8F /* cUserSingleton.h */,
+				518C5BEF188382CE00D8FF8F /* cUserSingleton.m */,
 			);
 			name = BO;
 			sourceTree = "<group>";
@@ -274,6 +282,8 @@
 			children = (
 				518C5BF1188382F600D8FF8F /* cPartyManager.h */,
 				518C5BF2188382F600D8FF8F /* cPartyManager.m */,
+				519E3C011891FD43005375DA /* cPlayerManager.h */,
+				519E3C021891FD43005375DA /* cPlayerManager.m */,
 			);
 			name = BOL;
 			sourceTree = "<group>";
@@ -384,7 +394,7 @@
 				513F889E1886624600374B02 /* AFSecurityPolicy.m in Sources */,
 				513F87A91886441A00374B02 /* LoginViewController.m in Sources */,
 				513F889D1886624600374B02 /* AFNetworkReachabilityManager.m in Sources */,
-				518C5BF0188382CE00D8FF8F /* cUser.m in Sources */,
+				518C5BF0188382CE00D8FF8F /* cUserSingleton.m in Sources */,
 				513F889F1886624600374B02 /* AFURLConnectionOperation.m in Sources */,
 				513F889A1886624600374B02 /* AFHTTPRequestOperation.m in Sources */,
 				513F889C1886624600374B02 /* AFHTTPSessionManager.m in Sources */,
@@ -394,10 +404,12 @@
 				518C5BC4188368C100D8FF8F /* MainMenuViewController.m in Sources */,
 				513F889B1886624600374B02 /* AFHTTPRequestOperationManager.m in Sources */,
 				513F87AC1886443000374B02 /* RegisterViewController.m in Sources */,
+				519E3C001891F329005375DA /* TeamViewController.m in Sources */,
 				513F88A11886624600374B02 /* AFURLResponseSerialization.m in Sources */,
 				518C5BBE188368C100D8FF8F /* AppDelegate.m in Sources */,
 				518C5BEA188371FA00D8FF8F /* TeamCreationViewController.m in Sources */,
 				518C5BBA188368C100D8FF8F /* main.m in Sources */,
+				519E3C031891FD43005375DA /* cPlayerManager.m in Sources */,
 				518C5BED188380C200D8FF8F /* cParty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

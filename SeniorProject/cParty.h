@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface cParty : NSObject {
-    NSString *_leader;
-    NSMutableArray *_members;
+    NSString *leader;
+    NSMutableArray *members;
 }
+
+
 
 @end

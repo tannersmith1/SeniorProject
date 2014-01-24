@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "MainMenuViewController.h"
+#import "cUserSingleton.h"
+#import "cPlayerManager.h"
 
 @interface LoginViewController ()
 
@@ -26,21 +28,27 @@
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     NSDictionary *params = @{@"username": [self.usernameField text],
                              @"password": [self.passwordField text]};
-    [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
         NSString *text = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        
+        self.resultsTextView.text = text;
         //MANUAL SEGUE HERE
-        if ([text isEqualToString:@"TRUE"]) {
-            [self performSegueWithIdentifier:@"loginSegue" sender:self];
+        if ([text isEqualToString:@"FALSE"])
+        {
+            self.resultsTextView.text = @"Username and password are incorrect";
         }
         else
         {
-            self.resultsTextView.text = text;
+            cUserSingleton *user = [cUserSingleton getInstance];
+            NSArray *parties = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+            user.parties = [[NSMutableArray alloc] initWithArray:parties];
+            [self performSegueWithIdentifier:@"loginSegue" sender:self];
         }
         
 
     }
-        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
         self.resultsTextView.text = [error localizedDescription];
         }];
     
@@ -61,6 +69,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.resultsTextView.text = @"";
 }
 
 - (void)didReceiveMemoryWarning
