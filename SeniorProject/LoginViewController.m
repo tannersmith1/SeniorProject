@@ -20,14 +20,18 @@
 
 -(IBAction)pressedLoginButton:(id)sender {
     
+    //Retrieve data from UI
+    NSString *username = self.usernameField.text;
+    NSString *password = self.passwordField.text;
+    
     //Post to web server, if credentials exist, move to main menu page
     
     self.resultsTextView.text = @"Login button pressed";
     NSString *url = @"http://localhost:8888/login.php";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSDictionary *params = @{@"username": [self.usernameField text],
-                             @"password": [self.passwordField text]};
+    NSDictionary *params = @{@"username": username,
+                             @"password": password};
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         NSString *text = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -42,6 +46,7 @@
             cUserSingleton *user = [cUserSingleton getInstance];
             NSArray *parties = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
             user.parties = [[NSMutableArray alloc] initWithArray:parties];
+            user.username = username;
             [self performSegueWithIdentifier:@"loginSegue" sender:self];
         }
         

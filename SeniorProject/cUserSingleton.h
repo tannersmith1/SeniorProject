@@ -16,5 +16,6 @@
 
 + (cUserSingleton *)getInstance;
 @property (nonatomic, strong)NSMutableArray *parties;
+@property (nonatomic, strong)NSString *username;
 
 @end

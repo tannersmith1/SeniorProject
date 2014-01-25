@@ -62,7 +62,7 @@ function sendResponse($status = 200, $body = '', $content_type = 'text/html')
     echo $body;
 }
 
-class LogoutAPI
+class CreateTeamAPI
 {
 	private $db;
 	private $conn;
@@ -70,8 +70,8 @@ class LogoutAPI
 	// Constructor - open DB connection
 	function __construct() 
 	{		
-		$conn = mysql_connect('localhost', 'root', '80136e');
-		if(!mysql_select_db("outbreak"))
+		$conn = mysql_connect('localhost', 'root', 'root');
+		if(!mysql_select_db("senior"))
 		{
 			echo "error1122";
 			exit;
@@ -84,26 +84,49 @@ class LogoutAPI
 		$this->db->close();
 	}
 
-	//creates the account of the id that is posted
-	function Logout()
+	//creates the Team of the id that is posted
+	function CreateTeam()
 	{
-	    	if (isset($_POST["username"]) )
-	    	{
-			//mysql_real_escape_string() used to sainitize input strings
-			$username = mysql_real_escape_string($_POST["username"]);			
+        if (isset($_POST["username"]) && isset($_POST["password"]) && isset($_POST["teamname"]))
+        {
+                //sanitize inputs
+                $username = mysql_real_escape_string( $_POST["username"] );
+                $password = mysql_real_escape_string( $_POST["password"] );
+                $teamname = mysql_real_escape_string( $_POST["teamname"] );
+                $isPrivate = mysql_real_escape_string( $_POST["private"] );
+                
+                //Convert isPrivate to a bool
+                if (strcmp(strtolower($isPrivate), "private") == 0)
+                {
+                    $isPrivate = 1;
+                }
+                else
+                {
+                    $isPrivate = 0;
+                }
+                //check if team already exists
+                $result = mysql_query("select party.partyid from party where partyname = '$teamname'");
 			
-			//checks to see if player exists
-			$result = mysql_query("update player set latitude = 0, longitude = 0 where username='$username'");
-			echo "loggedout";
-		}
-		else
-		{
-			echo "needs username";
-		}
-	}
+                //Since no teams were returned, add valid entry into database
+                if( mysql_num_rows( $result ) == 0)
+                {
+                    //insert user into database
+                    $result = mysql_query("insert into party (partyName, leader, password, isprivate) values('$teamname', '$username', '$password', '$isPrivate');");
+                    echo "TRUE";
+                }
+                else
+                {
+                    echo "FALSE";
+                }
+            }
+            else
+            {
+                echo "need username, password";
+            }
+    }
 }
 
-$api = new LogoutAPI;
-$api->Logout();
+$api = new CreateTeamAPI;
+$api->CreateTeam();
 unset($api);
 ?>
