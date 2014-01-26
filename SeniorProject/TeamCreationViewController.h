@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "cPartyManager.h"
+
 
 
 @interface TeamCreationViewController : UIViewController {
-    cPartyManager *_partyMGR;
+    
 }
 
 - (IBAction)createButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *pwField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *privateSwitcher;
+@property (weak, nonatomic) IBOutlet UITextView *resultsTextView;
 
 @end

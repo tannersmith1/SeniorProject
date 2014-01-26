@@ -39,8 +39,11 @@
 		518C5BED188380C200D8FF8F /* cParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BEC188380C200D8FF8F /* cParty.m */; };
 		518C5BF0188382CE00D8FF8F /* cUserSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BEF188382CE00D8FF8F /* cUserSingleton.m */; };
 		518C5BF3188382F600D8FF8F /* cPartyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 518C5BF2188382F600D8FF8F /* cPartyManager.m */; };
+		519C79FD1895B7FB0036E917 /* joinTeam.php in Resources */ = {isa = PBXBuildFile; fileRef = 519C79FC1895B7FB0036E917 /* joinTeam.php */; };
 		519E3C001891F329005375DA /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519E3BFF1891F328005375DA /* TeamViewController.m */; };
 		519E3C031891FD43005375DA /* cPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 519E3C021891FD43005375DA /* cPlayerManager.m */; };
+		519E3C0518935E2C005375DA /* createTeam.php in Resources */ = {isa = PBXBuildFile; fileRef = 519E3C0418935E2C005375DA /* createTeam.php */; };
+		519E3C081893688F005375DA /* JoinTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519E3C071893688F005375DA /* JoinTeamViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,10 +110,14 @@
 		518C5BEF188382CE00D8FF8F /* cUserSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cUserSingleton.m; sourceTree = "<group>"; };
 		518C5BF1188382F600D8FF8F /* cPartyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cPartyManager.h; sourceTree = "<group>"; };
 		518C5BF2188382F600D8FF8F /* cPartyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cPartyManager.m; sourceTree = "<group>"; };
+		519C79FC1895B7FB0036E917 /* joinTeam.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = joinTeam.php; path = ../../../../../Applications/MAMP/htdocs/joinTeam.php; sourceTree = "<group>"; };
 		519E3BFE1891F328005375DA /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
 		519E3BFF1891F328005375DA /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
 		519E3C011891FD43005375DA /* cPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cPlayerManager.h; sourceTree = "<group>"; };
 		519E3C021891FD43005375DA /* cPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cPlayerManager.m; sourceTree = "<group>"; };
+		519E3C0418935E2C005375DA /* createTeam.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = createTeam.php; path = ../../../../../Applications/MAMP/htdocs/createTeam.php; sourceTree = "<group>"; };
+		519E3C061893688F005375DA /* JoinTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinTeamViewController.h; sourceTree = "<group>"; };
+		519E3C071893688F005375DA /* JoinTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinTeamViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +173,8 @@
 		513F88A31886754A00374B02 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				519C79FC1895B7FB0036E917 /* joinTeam.php */,
+				519E3C0418935E2C005375DA /* createTeam.php */,
 				513F88A41886757E00374B02 /* createAccount.php */,
 				513F88A51886757E00374B02 /* login.php */,
 				513F88A61886757E00374B02 /* logout.php */,
@@ -262,6 +271,8 @@
 				513F87AB1886443000374B02 /* RegisterViewController.m */,
 				519E3BFE1891F328005375DA /* TeamViewController.h */,
 				519E3BFF1891F328005375DA /* TeamViewController.m */,
+				519E3C061893688F005375DA /* JoinTeamViewController.h */,
+				519E3C071893688F005375DA /* JoinTeamViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -368,6 +379,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				513F88A71886757E00374B02 /* createAccount.php in Resources */,
+				519C79FD1895B7FB0036E917 /* joinTeam.php in Resources */,
+				519E3C0518935E2C005375DA /* createTeam.php in Resources */,
 				518C5BC6188368C100D8FF8F /* Images.xcassets in Resources */,
 				513F88A91886757E00374B02 /* logout.php in Resources */,
 				513F88A81886757E00374B02 /* login.php in Resources */,
@@ -402,6 +415,7 @@
 				518C5BF3188382F600D8FF8F /* cPartyManager.m in Sources */,
 				513F88A21886624600374B02 /* AFURLSessionManager.m in Sources */,
 				518C5BC4188368C100D8FF8F /* MainMenuViewController.m in Sources */,
+				519E3C081893688F005375DA /* JoinTeamViewController.m in Sources */,
 				513F889B1886624600374B02 /* AFHTTPRequestOperationManager.m in Sources */,
 				513F87AC1886443000374B02 /* RegisterViewController.m in Sources */,
 				519E3C001891F329005375DA /* TeamViewController.m in Sources */,

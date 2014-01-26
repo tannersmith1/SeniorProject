@@ -24,6 +24,13 @@
     teamArray = [NSArray arrayWithArray:user.parties];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    cUserSingleton *user = [cUserSingleton getInstance];
+    teamArray = [NSArray arrayWithArray:user.parties];
+    [self.teamsTable reloadData];
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
