@@ -363,7 +363,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
+<<<<<<< HEAD
                                     <action selector="hideKeyboard:" destination="rbD-mL-UZK" eventType="editingDidEndOnExit" id="NYP-ID-BTG"/>
+=======
+                                    <action selector="hideKeyboard:" destination="rbD-mL-UZK" eventType="editingDidEnd" id="2MO-Xo-soC"/>
+>>>>>>> b075daa31b91ff379d3e07107e6ed075861d5590
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91I-IN-zO1">
@@ -400,6 +404,7 @@
                     <view key="view" contentMode="scaleToFill" id="mHW-vE-0en">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<<<<<<< HEAD
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join a Team!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGM-2I-TcM">
                                 <rect key="frame" x="107" y="82" width="106" height="21"/>
@@ -464,6 +469,11 @@
                         <outlet property="resultTextView" destination="6f7-aM-dG4" id="sGM-n7-gzR"/>
                         <outlet property="teamNameField" destination="Wwt-ai-9VS" id="hKO-Bf-EBy"/>
                     </connections>
+=======
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YrD-lR-jV4"/>
+>>>>>>> b075daa31b91ff379d3e07107e6ed075861d5590
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ck-Tz-jt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

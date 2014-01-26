@@ -173,7 +173,10 @@
 		513F88A31886754A00374B02 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				519C79FC1895B7FB0036E917 /* joinTeam.php */,
+=======
+>>>>>>> b075daa31b91ff379d3e07107e6ed075861d5590
 				519E3C0418935E2C005375DA /* createTeam.php */,
 				513F88A41886757E00374B02 /* createAccount.php */,
 				513F88A51886757E00374B02 /* login.php */,
@@ -379,7 +382,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				513F88A71886757E00374B02 /* createAccount.php in Resources */,
+<<<<<<< HEAD
 				519C79FD1895B7FB0036E917 /* joinTeam.php in Resources */,
+=======
+>>>>>>> b075daa31b91ff379d3e07107e6ed075861d5590
 				519E3C0518935E2C005375DA /* createTeam.php in Resources */,
 				518C5BC6188368C100D8FF8F /* Images.xcassets in Resources */,
 				513F88A91886757E00374B02 /* logout.php in Resources */,
