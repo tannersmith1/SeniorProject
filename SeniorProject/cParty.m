@@ -10,4 +10,9 @@
 
 @implementation cParty
 
+- (void)aFunction
+{
+    
+};
+
 @end
