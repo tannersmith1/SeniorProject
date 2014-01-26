@@ -7,11 +7,8 @@
 //
 
 #import "JoinTeamViewController.h"
-<<<<<<< HEAD
 #import "cUserSingleton.h"
 #import "AFHTTPRequestOperationManager.h"
-=======
->>>>>>> b075daa31b91ff379d3e07107e6ed075861d5590
 
 @interface JoinTeamViewController ()
 
@@ -39,7 +36,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-<<<<<<< HEAD
 - (IBAction)hideKeyboard:(id)sender
 {
     [self.teamNameField resignFirstResponder];
@@ -91,7 +87,4 @@
     {
         self.resultTextView.text = @"No team selected or you already belong to that team";
     }}
-=======
-
->>>>>>> b075daa31b91ff379d3e07107e6ed075861d5590
 @end

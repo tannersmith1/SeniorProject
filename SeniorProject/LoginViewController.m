@@ -46,11 +46,7 @@
             cUserSingleton *user = [cUserSingleton getInstance];
             NSArray *parties = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
             user.parties = [[NSMutableArray alloc] initWithArray:parties];
-<<<<<<< HEAD
             user.username = [[NSString alloc] initWithString:username];
-=======
-            user.username = username;
->>>>>>> b075daa31b91ff379d3e07107e6ed075861d5590
             [self performSegueWithIdentifier:@"loginSegue" sender:self];
         }
         

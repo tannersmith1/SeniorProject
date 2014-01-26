@@ -46,10 +46,7 @@
              if ([text isEqualToString:@"TRUE"])
              {
                  self.resultsTextView.text = @"Your Team has been created";
-<<<<<<< HEAD
                  [user.parties addObject:teamName];
-=======
->>>>>>> b075daa31b91ff379d3e07107e6ed075861d5590
              }
              else
              {
