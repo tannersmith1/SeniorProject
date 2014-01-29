@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainMenuViewController : UIViewController {
-    NSArray *teamArray;
-}
-
-@property (nonatomic, weak) IBOutlet UITableView *teamsTable;
+@interface MainMenuViewController : UIViewController
 
 @end

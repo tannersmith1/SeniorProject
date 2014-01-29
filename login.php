@@ -62,15 +62,14 @@ function sendResponse($status = 200, $body = '', $content_type = 'text/html')
     echo $body;
 }
 
-class GetPartyAPI
+class LoginAPI
 {
 	private $db;
 	private $conn;
 
 	// Constructor - open DB connection
 	function __construct() 
-	{
-        echo "constructoer";
+	{		
 		$conn = mysql_connect('localhost', 'root', 'root');
 		if(!mysql_select_db("senior"))
 		{
@@ -85,63 +84,34 @@ class GetPartyAPI
 		$this->db->close();
 	}
 
-	//Return all the members given a party name
-	function GetParty()
+	//creates the account of the id that is posted
+	function Login()
 	{
-        
-        if (isset($_POST["teamname"]) )
-        {
-            
-            
+	    	if (isset($_POST["username"]) && isset($_POST["password"]) )
+	    	{
 			//mysql_real_escape_string() used to sainitize input strings
-			$teamname = mysql_real_escape_string($_POST["teamname"]);
-			
+			$username = mysql_real_escape_string($_POST["username"]);
+			$password = mysql_real_escape_string($_POST["password"]);
 			
 			//checks to see if player exists
-			$result = mysql_query("select partyid from party where partyname='$teamname'");
+			$result = mysql_query("select playerid from player where username='$username' and player_password='$password'");
 			if( mysql_num_rows( $result ) == 0)
 			{
 				echo "FALSE";
 			}
 			else
 			{				
-				
-                
-                
-                //Party Members
-                $result = mysql_query("call party_members('$teamname')");
-                $partyMembers = array();
-                $count = 0;
-                
-                while ($row = mysql_fetch_assoc($result))
-                {
-                    $partyMembers[$count] = $row["username"];
-                    $count = $count + 1;
-                }
-                
-                $result = mysql_query("select leader from party where partyname='$teamname'");
-                
-                while($row = mysql_fetch_assoc($result))
-                {
-                    $partyLeader = $row["leader"];
-                }
-                $partyData = array('name' => $teamname, 'leader' => $partyLeader, 'members' => $partyMembers);
-                
-                echo json_encode($partyLeader);
-             
-			 }
-            
+				echo "TRUE";
+			}
 		}
 		else
 		{
-			echo "Needs teamname";
+			echo "needs username, password";
 		}
-        
-        
 	}
 }
 
-$api = new GetPartyAPI;
-$api->GetParty();
+$api = new LoginAPI;
+$api->Login();
 unset($api);
 ?>
