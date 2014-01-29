@@ -16,20 +16,43 @@
 @implementation RegisterViewController
 
 - (IBAction)registerButtonPressed:(id)sender {
-    //Post to web service if response = TRUE, tell user they had success, IF FALSE tell them to choose another name
-    self.resultsTextView.text = @"Register button pressed";
-    NSString *url = @"http://localhost:8888/createAccount.php";
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSDictionary *params = @{@"username": [self.usernameField text],
-                             @"password": [self.passwordField text]};
-    [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSString *text = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        self.resultsTextView.text = text;
+    
+    NSString *username = self.usernameField.text;
+    NSString *password = self.passwordField.text;
+    NSString *rePassword = self.rePasswordField.text;
+    
+    if ( ![username isEqualToString:@""] && ![password isEqualToString:@""] && [password isEqualToString:rePassword] )
+    {
+        
+    
+        NSString *url = @"http://localhost:8888/createAccount.php";
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        NSDictionary *params = @{@"username": username,
+                                 @"password": password};
+    
+        [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+         {
+             NSString *text = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+             self.resultsTextView.text = text;
+             if ([text isEqualToString:@"TRUE"])
+             {
+                 self.resultsTextView.text = @"Your account has been created";
+             }
+             else
+             {
+                 self.resultsTextView.text = @"Username taken, please try another";
+             }
+         }
+              failure:^(AFHTTPRequestOperation *operation, NSError *error)
+         {
+             self.resultsTextView.text = [error localizedDescription];
+         }];
     }
-    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        self.resultsTextView.text = [error localizedDescription];
-    }];
+    else
+    {
+        self.resultsTextView.text = @"Passwords do not match or fields are empty";
+    }
 }
 
 //--------------------------------------------------
