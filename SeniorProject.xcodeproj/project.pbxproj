@@ -20,7 +20,6 @@
 		513F88A21886624600374B02 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 513F88991886624600374B02 /* AFURLSessionManager.m */; };
 		513F88A71886757E00374B02 /* createAccount.php in Resources */ = {isa = PBXBuildFile; fileRef = 513F88A41886757E00374B02 /* createAccount.php */; };
 		513F88A81886757E00374B02 /* login.php in Resources */ = {isa = PBXBuildFile; fileRef = 513F88A51886757E00374B02 /* login.php */; };
-		513F88A91886757E00374B02 /* logout.php in Resources */ = {isa = PBXBuildFile; fileRef = 513F88A61886757E00374B02 /* logout.php */; };
 		518C5BAE188368C100D8FF8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518C5BAD188368C100D8FF8F /* Foundation.framework */; };
 		518C5BB0188368C100D8FF8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518C5BAF188368C100D8FF8F /* CoreGraphics.framework */; };
 		518C5BB2188368C100D8FF8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518C5BB1188368C100D8FF8F /* UIKit.framework */; };
@@ -77,7 +76,6 @@
 		513F88991886624600374B02 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		513F88A41886757E00374B02 /* createAccount.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = createAccount.php; path = ../../../../../Applications/MAMP/htdocs/createAccount.php; sourceTree = "<group>"; };
 		513F88A51886757E00374B02 /* login.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = login.php; path = ../../../../../Applications/MAMP/htdocs/login.php; sourceTree = "<group>"; };
-		513F88A61886757E00374B02 /* logout.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = logout.php; path = ../../../../../Applications/MAMP/htdocs/logout.php; sourceTree = "<group>"; };
 		518C5BAA188368C100D8FF8F /* SeniorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeniorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518C5BAD188368C100D8FF8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		518C5BAF188368C100D8FF8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,7 +160,6 @@
 			children = (
 				513F88A41886757E00374B02 /* createAccount.php */,
 				513F88A51886757E00374B02 /* login.php */,
-				513F88A61886757E00374B02 /* logout.php */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -359,7 +356,6 @@
 			files = (
 				513F88A71886757E00374B02 /* createAccount.php in Resources */,
 				518C5BC6188368C100D8FF8F /* Images.xcassets in Resources */,
-				513F88A91886757E00374B02 /* logout.php in Resources */,
 				513F88A81886757E00374B02 /* login.php in Resources */,
 				518C5BB8188368C100D8FF8F /* InfoPlist.strings in Resources */,
 				518C5BC1188368C100D8FF8F /* Main.storyboard in Resources */,
