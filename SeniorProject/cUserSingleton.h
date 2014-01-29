@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cParty.h"
 
 @interface cUserSingleton : NSObject {
     
-    NSString *username;
-    NSMutableArray *parties;
+    
 }
 
 + (cUserSingleton *)getInstance;
 @property (nonatomic, strong)NSMutableArray *parties;
 @property (nonatomic, strong)NSString *username;
+@property (nonatomic, strong)cParty *activeParty;
 
 @end

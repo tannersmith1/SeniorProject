@@ -44,6 +44,8 @@
 		519E3C031891FD43005375DA /* cPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 519E3C021891FD43005375DA /* cPlayerManager.m */; };
 		519E3C0518935E2C005375DA /* createTeam.php in Resources */ = {isa = PBXBuildFile; fileRef = 519E3C0418935E2C005375DA /* createTeam.php */; };
 		519E3C081893688F005375DA /* JoinTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519E3C071893688F005375DA /* JoinTeamViewController.m */; };
+		51A0D19D1898C6AB0090FCA8 /* TeamMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A0D19C1898C6AB0090FCA8 /* TeamMenuViewController.m */; };
+		51A0D19F1898CF300090FCA8 /* getMembers.php in Resources */ = {isa = PBXBuildFile; fileRef = 51A0D19E1898CF300090FCA8 /* getMembers.php */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,9 @@
 		519E3C0418935E2C005375DA /* createTeam.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = createTeam.php; path = ../../../../../Applications/MAMP/htdocs/createTeam.php; sourceTree = "<group>"; };
 		519E3C061893688F005375DA /* JoinTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinTeamViewController.h; sourceTree = "<group>"; };
 		519E3C071893688F005375DA /* JoinTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinTeamViewController.m; sourceTree = "<group>"; };
+		51A0D19B1898C6AB0090FCA8 /* TeamMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMenuViewController.h; sourceTree = "<group>"; };
+		51A0D19C1898C6AB0090FCA8 /* TeamMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMenuViewController.m; sourceTree = "<group>"; };
+		51A0D19E1898CF300090FCA8 /* getMembers.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; name = getMembers.php; path = ../../../../../Applications/MAMP/htdocs/getMembers.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +182,7 @@
 				519E3C0418935E2C005375DA /* createTeam.php */,
 				513F88A41886757E00374B02 /* createAccount.php */,
 				513F88A51886757E00374B02 /* login.php */,
+				51A0D19E1898CF300090FCA8 /* getMembers.php */,
 				513F88A61886757E00374B02 /* logout.php */,
 			);
 			name = Server;
@@ -273,6 +279,8 @@
 				519E3BFF1891F328005375DA /* TeamViewController.m */,
 				519E3C061893688F005375DA /* JoinTeamViewController.h */,
 				519E3C071893688F005375DA /* JoinTeamViewController.m */,
+				51A0D19B1898C6AB0090FCA8 /* TeamMenuViewController.h */,
+				51A0D19C1898C6AB0090FCA8 /* TeamMenuViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -381,6 +389,7 @@
 				513F88A71886757E00374B02 /* createAccount.php in Resources */,
 				519C79FD1895B7FB0036E917 /* joinTeam.php in Resources */,
 				519E3C0518935E2C005375DA /* createTeam.php in Resources */,
+				51A0D19F1898CF300090FCA8 /* getMembers.php in Resources */,
 				518C5BC6188368C100D8FF8F /* Images.xcassets in Resources */,
 				513F88A91886757E00374B02 /* logout.php in Resources */,
 				513F88A81886757E00374B02 /* login.php in Resources */,
@@ -412,6 +421,7 @@
 				513F889A1886624600374B02 /* AFHTTPRequestOperation.m in Sources */,
 				513F889C1886624600374B02 /* AFHTTPSessionManager.m in Sources */,
 				513F88A01886624600374B02 /* AFURLRequestSerialization.m in Sources */,
+				51A0D19D1898C6AB0090FCA8 /* TeamMenuViewController.m in Sources */,
 				518C5BF3188382F600D8FF8F /* cPartyManager.m in Sources */,
 				513F88A21886624600374B02 /* AFURLSessionManager.m in Sources */,
 				518C5BC4188368C100D8FF8F /* MainMenuViewController.m in Sources */,

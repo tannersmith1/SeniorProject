@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface cParty : NSObject {
-    NSString *leader;
-    NSMutableArray *members;
-}
+@interface cParty : NSObject
 
+@property (nonatomic, weak)NSString *name;
+@property (nonatomic, strong)NSString *leader;
+@property (nonatomic, strong)NSMutableArray *members;
 
 
 @end

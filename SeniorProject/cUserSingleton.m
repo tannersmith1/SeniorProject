@@ -20,6 +20,7 @@ static cUserSingleton *sharedObject = nil;
         if(!sharedObject)
         {
             sharedObject = [[cUserSingleton alloc] init];
+            sharedObject.activeParty = [[cParty alloc] init];
         }
     }
     

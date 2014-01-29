@@ -293,11 +293,89 @@
                         <outlet property="createButton" destination="5zW-JR-zkG" id="8wz-Lu-wnf"/>
                         <outlet property="joinButton" destination="55o-n5-bTV" id="HLD-Dd-yMl"/>
                         <outlet property="teamsTable" destination="vtc-GY-XNZ" id="4Qo-2J-sd5"/>
+                        <segue destination="VVK-Sp-Toq" kind="push" identifier="teamSelectedSegue" id="qo5-Ws-1em"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urc-OX-fRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2137" y="62"/>
+        </scene>
+        <!--Team Menu View Controller-->
+        <scene sceneID="FQH-pz-jIl">
+            <objects>
+                <viewController id="VVK-Sp-Toq" customClass="TeamMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zr1-UA-sHL"/>
+                        <viewControllerLayoutGuide type="bottom" id="37W-X7-c8r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0wu-08-mD6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6H-mM-93Z">
+                                <rect key="frame" x="109" y="165" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Roster">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="i20-3L-ofL" kind="push" id="Fw6-GQ-d5e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5c-9G-wUk">
+                                <rect key="frame" x="124" y="263" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gul-es-VUR">
+                                <rect key="frame" x="49" y="97" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J88-Be-f6A"/>
+                    <connections>
+                        <outlet property="teamNameLabel" destination="Gul-es-VUR" id="yY8-Om-O9e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FTK-re-VX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2806" y="37"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="hEW-uZ-jnx">
+            <objects>
+                <tableViewController id="i20-3L-ofL" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bgz-mO-4Sg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AOz-3Y-Bbz">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AOz-3Y-Bbz" id="Uy9-qA-BaI">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="i20-3L-ofL" id="Nv4-Rv-fn7"/>
+                            <outlet property="delegate" destination="i20-3L-ofL" id="k5m-Y5-fpw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vRd-ss-Pfp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRs-2y-xT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3282" y="62"/>
         </scene>
         <!--Team Creation View Controller-->
         <scene sceneID="AsG-Os-QkF">
@@ -387,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zc0-vs-Igl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2888" y="12"/>
+            <point key="canvasLocation" x="1784" y="-920"/>
         </scene>
         <!--Join Team View Controller-->
         <scene sceneID="EU4-Ur-1Ja">
@@ -467,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ck-Tz-jt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2598" y="739"/>
+            <point key="canvasLocation" x="2398" y="-977"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qmc-yk-o8q">
